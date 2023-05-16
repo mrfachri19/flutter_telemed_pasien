@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "417985879510",
+    "project_id": "new-beeatt",
+    "storage_bucket": "new-beeatt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417985879510:android:f6b6a029ce29ed418dd877",
+        "android_client_info": {
+          "package_name": "com.pkp.beeatt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417985879510-c3585adqkqnea6d3fptfnhu8de590f3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB23Mpu6llpfPXEO0B2eaDu_yageSJU4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417985879510-c3585adqkqnea6d3fptfnhu8de590f3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
