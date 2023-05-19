@@ -1,4 +1,4 @@
-package com.pkp.beeatt
+package com.pkp.telemedicine_pasien
 
 import io.flutter.embedding.android.FlutterActivity
 
