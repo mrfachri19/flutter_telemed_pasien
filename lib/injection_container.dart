@@ -1,17 +1,21 @@
 import 'package:get_it/get_it.dart';
 import 'package:telemedicine_pasien/bloc/cubit/artikel_cubit.dart';
+import 'package:telemedicine_pasien/bloc/cubit/faq_cubit.dart';
+import 'package:telemedicine_pasien/bloc/cubit/help_member_cubit.dart';
 import 'package:telemedicine_pasien/bloc/cubit/kebijakan_privasi_cubit.dart';
 import 'package:telemedicine_pasien/bloc/cubit/login_email_cubit.dart';
 import 'package:telemedicine_pasien/bloc/cubit/promo_banner_cubit.dart';
 import 'package:telemedicine_pasien/bloc/cubit/service_category_cubit.dart';
 import 'package:telemedicine_pasien/bloc/cubit/term_condition_cubit.dart';
 import 'package:telemedicine_pasien/repositories/artikel_repository.dart';
+import 'package:telemedicine_pasien/repositories/help_member_repository.dart';
 import 'package:telemedicine_pasien/repositories/kebijakan_privasi_repository.dart';
 import 'package:telemedicine_pasien/repositories/login_email_repository.dart';
 import 'package:telemedicine_pasien/repositories/promo_banner_repository.dart';
 import 'package:telemedicine_pasien/repositories/service_category_repository.dart';
 import 'package:telemedicine_pasien/repositories/term_condition_repository.dart';
 import 'package:telemedicine_pasien/repository_impl/artikel_repository_impl.dart';
+import 'package:telemedicine_pasien/repository_impl/help_member_impl.dart';
 import 'package:telemedicine_pasien/repository_impl/kebijakan_privasi_repository_impl.dart';
 import 'package:telemedicine_pasien/repository_impl/login_email_repository_impl.dart';
 import 'package:telemedicine_pasien/repository_impl/promo_banner_impl.dart';
@@ -31,6 +35,12 @@ Future<GetIt> init() async {
   }
   if (!sl.isRegistered<KebijakanPrivasiCubit>()) {
     sl.registerLazySingleton(() => KebijakanPrivasiCubit());
+  }
+  if (!sl.isRegistered<HelpMemberCubit>()) {
+    sl.registerLazySingleton(() => HelpMemberCubit());
+  }
+  if (!sl.isRegistered<FaqCubit>()) {
+    sl.registerLazySingleton(() => FaqCubit());
   }
   if (!sl.isRegistered<LoginEmailCubit>()) {
     sl.registerLazySingleton(() => LoginEmailCubit());
@@ -53,6 +63,12 @@ Future<GetIt> init() async {
   }
   if (!sl.isRegistered<KebijakanPrivasiRepository>()) {
     sl.registerLazySingleton(() => KebijakanPrivasiImpl(
+          networkInfo: sl<NetworkInfoImpl>(),
+          remoteDataSource: sl<RemoteDataSource>(),
+        ));
+  }
+  if (!sl.isRegistered<HelpMemberRepository>()) {
+    sl.registerLazySingleton(() => HelpMemberImpl(
           networkInfo: sl<NetworkInfoImpl>(),
           remoteDataSource: sl<RemoteDataSource>(),
         ));

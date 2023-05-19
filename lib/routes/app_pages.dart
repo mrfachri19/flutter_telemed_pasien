@@ -5,6 +5,8 @@ import 'package:telemedicine_pasien/pages/auth/login_email.dart';
 // routing
 import 'package:telemedicine_pasien/pages/home/home.dart';
 import 'package:telemedicine_pasien/pages/auth/welcome.dart';
+import 'package:telemedicine_pasien/pages/html_render/faq_page.dart';
+import 'package:telemedicine_pasien/pages/html_render/help_member_page.dart';
 import 'package:telemedicine_pasien/pages/main_page/main_page.dart';
 import 'package:telemedicine_pasien/pages/pages.dart';
 import 'package:telemedicine_pasien/pages/profile/profile.dart';
@@ -40,6 +42,10 @@ class AppPages {
             return const HtmlRenderPage();
           case Routes.kebijakanprivasi:
             return const KebijakanPrivasi();
+          case Routes.helpmember:
+            return const HelpMemberPage();
+          case Routes.faq:
+            return const FaqPage();
           case Routes.loginwith:
             return const LoginWith();
           case Routes.loginemail:

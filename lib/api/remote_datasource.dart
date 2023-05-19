@@ -3,6 +3,7 @@ import 'package:telemedicine_pasien/api/api_response.dart';
 import 'package:telemedicine_pasien/api/service_url.dart';
 import 'package:telemedicine_pasien/injection_container.dart';
 import 'package:telemedicine_pasien/model/artikel_model.dart';
+import 'package:telemedicine_pasien/model/help_member_model.dart';
 // model
 import 'package:telemedicine_pasien/model/kebijakan_privasi_model.dart';
 import 'package:telemedicine_pasien/model/login.dart';
@@ -24,9 +25,16 @@ class RemoteDataSource {
     return ApiResponse.fromJson(response, TermCondition.fromJson);
   }
 
-  Future<ApiResponse<KebijakanPrivasi>> getKebijakanPrivasi() async {
-    final response = await _apiClient.get(ServiceUrl.kebijakanprivasi);
+  Future<ApiResponse<KebijakanPrivasi>> getKebijakanPrivasi(
+      Map<String, dynamic> params) async {
+    final response = await _apiClient.get(ServiceUrl.kebijakanprivasi,
+        queryParameters: params);
     return ApiResponse.fromJson(response, KebijakanPrivasi.fromJson);
+  }
+
+  Future<ApiResponse<HelpMemberModel>> getHelpMember() async {
+    final response = await _apiClient.get(ServiceUrl.helpmember);
+    return ApiResponse.fromJson(response, HelpMemberModel.fromJson);
   }
 
   Future<ApiResponse<ServiceCategoryModel>> getServiceCategory() async {

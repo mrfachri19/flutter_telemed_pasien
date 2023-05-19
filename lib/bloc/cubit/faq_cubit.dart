@@ -4,15 +4,15 @@ import 'package:telemedicine_pasien/model/kebijakan_privasi_model.dart';
 import 'package:telemedicine_pasien/repositories/kebijakan_privasi_repository.dart';
 import 'package:telemedicine_pasien/repository_impl/kebijakan_privasi_repository_impl.dart';
 import 'package:telemedicine_pasien/utils/result.dart';
-part 'kebijakan_privasi_state.dart';
+part 'faq_state.dart';
 
-class KebijakanPrivasiCubit extends Cubit<KebijakanPrivasiState> {
+class FaqCubit extends Cubit<FaqState> {
   final KebijakanPrivasiRepository _kebijakanPrivasiRepository =
       sl<KebijakanPrivasiImpl>();
-  KebijakanPrivasiCubit() : super(const KebijakanPrivasiState());
+  FaqCubit() : super(const FaqState());
 
   void init() {
-    emit(const KebijakanPrivasiState());
+    emit(const FaqState());
     getKebijakanPrivasi();
   }
 
@@ -20,7 +20,7 @@ class KebijakanPrivasiCubit extends Cubit<KebijakanPrivasiState> {
     emit(state.copyWith(kebijakanprivasi: Result.loading()));
     print("loading");
     final response = await _kebijakanPrivasiRepository.getKebijakanPrivasi({
-      'key': 'privacy_policy_member',
+      'key': 'faq_member',
     });
 
     response.fold((failure) {

@@ -225,7 +225,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     fontSize: 20)),
                           ),
                           onTap: () {
-                            // print("Click event on Container");
+                            Navigator.pushNamed(context, Routes.faq);
                           },
                         ),
                       ],
@@ -253,7 +253,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     fontSize: 20)),
                           ),
                           onTap: () {
-                            // print("Click event on Container");
+                            Navigator.pushNamed(context, Routes.helpmember);
                           },
                         ),
                       ],
