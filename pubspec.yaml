@@ -29,67 +29,24 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  baseflow_plugin_template: ^2.1.1
-  cupertino_icons: ^1.0.2
   dartz: ^0.10.1
-  datetime_setting: ^2.0.2
   device_info_plus: ^8.0.0
   dio: ^4.0.6
-  # time_change_detector: ^0.0.2
-  dropdown_button2: ^1.8.9
-  equatable: ^2.0.5
-  firebase_core: ^2.3.0
-  firebase_messaging: ^14.1.1
-  fl_chart: ^0.55.2
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
-  flutter_local_notifications: ^9.9.1
-  flutter_native_timezone: ^2.0.0
-  flutter_svg: ^1.1.6
-  geocoding: ^2.0.5
-  geolocator: ^9.0.2
   get_it: ^7.2.0
-  google_fonts: ^3.0.1
-  google_maps_flutter: ^2.2.1
-  intl: ^0.17.0
-  loading_overlay: ^0.3.0
-  map_launcher: ^2.4.0
   package_info: ^2.0.2
-  lottie: ^2.2.0
-  path_provider: ^2.0.11
+  rounded_loading_button: ^2.1.0
+  equatable: ^2.0.5
+  intl: ^0.17.0
   pretty_dio_logger: ^1.1.1
-  pull_to_refresh: ^2.0.0
   shared_preferences: ^2.0.15
   skeleton_text: ^3.0.0
-  slide_digital_clock: ^1.0.2
-  syncfusion_flutter_charts: ^19.2.47
-  table_calendar: ^3.0.8
-  timer_builder: ^2.0.0
-  uuid: ^3.0.7
-  flutter_animated_dialog: ^2.0.1
-  flutter_calendar_carousel: ^2.4.1
-  cached_network_image: ^3.2.3
-  android_intent_plus: ^3.1.6
-  image_picker: ^0.8.5+3
-  nb_utils: ^4.5.2
-  time_picker_sheet: ^0.0.2+1
-  shimmer: ^2.0.0
-  confetti: ^0.7.0
   provider: ^6.0.3
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  html_unescape: ^2.0.0
   flutter_html: ^3.0.0-alpha.5
-  jiffy: ^5.0.0
-  rounded_loading_button: ^2.1.0
   get: ^4.6.5
-  page_transition:
-  # trust_location: ^2.0.13
-  # safe_device: ^1.1.2
   permission_handler: ^10.2.0
-  showcaseview: ^1.1.4
-
 
 dev_dependencies:
   change_app_package_name: ^1.1.0
